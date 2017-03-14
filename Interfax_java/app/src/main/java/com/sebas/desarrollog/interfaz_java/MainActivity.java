@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       /* setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
            }
-        });*/
+        });
 
-        TextView mitexto= new TextView(this);
-        mitexto.setText("hola putos");
-        setContentView(mitexto);
-
+       /* TextView mitexto= new TextView(this);s
+        mitexto.setText("hola putos");//--------------asigna texto
+        setContentView(mitexto);//----------vista que mostrara la actividad
+        */
     }
 
     @Override
