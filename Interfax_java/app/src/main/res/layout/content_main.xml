@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,80 +11,54 @@
     tools:layout_editor_absoluteX="0dp">
 
 
-    <RelativeLayout
+    <Button
+        android:id="@+id/button"
+        android:layout_width="168dp"
+        android:layout_height="49dp"
+        android:onClick="reseteaContador"
+        android:text="Resetear"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="231dp"
+        android:layout_below="@+id/txtCon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp" />
 
-
-        android:layout_width="395dp"
-        android:layout_height="587dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
-
-        <Button
-            android:id="@+id/btnReset"
-            android:layout_width="168dp"
-            android:layout_height="49dp"
-            android:text="Resetear"
-            tools:layout_editor_absoluteX="108dp"
-            tools:layout_editor_absoluteY="231dp"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/btnRes"
-            android:layout_alignStart="@+id/btnRes"
-            android:onClick="reseteaContador"
-            />
-
-        <TextView
-            android:id="@+id/txtCon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contador"
-            tools:fontFamily="sans-serif-smallcaps"
-            tools:layout_editor_absoluteX="133dp"
-            tools:layout_editor_absoluteY="30dp"
-            tools:textSize="30sp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="69dp" />
-
-        <Button
-            android:id="@+id/btnInc"
-            android:layout_width="168dp"
-            android:layout_height="49dp"
-            android:text="Incrementa en 1"
-            tools:layout_editor_absoluteX="108dp"
-            tools:layout_editor_absoluteY="157dp"
-            android:layout_below="@+id/btnReset"
-            android:layout_alignLeft="@+id/btnReset"
-            android:layout_alignStart="@+id/btnReset"
-            android:layout_marginTop="30dp"
-            android:onClick="incrementarContador"
-            />
-
-        <Button
-            android:id="@+id/btnRes"
-            android:layout_width="168dp"
-            android:layout_height="49dp"
-            android:text="Resta 1"
-            tools:layout_editor_absoluteX="108dp"
-            tools:layout_editor_absoluteY="301dp"
-            android:layout_marginRight="107dp"
-            android:layout_marginEnd="107dp"
-            android:layout_below="@+id/btnInc"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="26dp"
-            android:onClick="restaContador"
-            />
-    </RelativeLayout>
-
-
-    <android.support.constraint.Guideline
+    <TextView
+        android:id="@+id/txtCon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteY="20dp"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:text="Contador"
+        tools:fontFamily="sans-serif-smallcaps"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="30dp"
+        tools:textSize="30sp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="168dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="38dp"
+        android:onClick="incrementarContador"
+        android:text="Incrementa en 1"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="157dp"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="168dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:onClick="restaContador"
+        android:text="Resta 1"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="301dp"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+</RelativeLayout>
